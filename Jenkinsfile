@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('clone') {
+            steps {
+              echo "clone"
+    }
+   }
         stage('compile') {
             steps {
                 echo "compile"
