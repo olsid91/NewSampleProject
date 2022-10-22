@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('clone') {
             steps {
-                echo 'Hello World'
+                git https://github.com/olsid91/NewSampleProject.git
             }
         }
       stage('compile') {
             steps {
-              echo 'compilation'
+              sh 'mvn compile'
     }
    }
   }
