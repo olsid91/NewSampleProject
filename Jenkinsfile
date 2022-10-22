@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-              echo "clone"
+              git "https://github.com/olsid91/NewSampleProject.git"
     }
    }
         stage('compile') {
             steps {
-                echo "compile"
+                sh "mvn compile"
             }
         }
       stage('test') {
             steps {
-              echo "test"
+               sh "mvn test"
     }
    }
   }
