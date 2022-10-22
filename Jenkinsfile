@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('clone') {
+        stage('compile') {
             steps {
-                git "https://github.com/olsid91/NewSampleProject.git"
+                echo "compile"
             }
         }
-      stage('compile') {
+      stage('test') {
             steps {
-              sh 'mvn compile'
+              echo "test"
     }
    }
   }
